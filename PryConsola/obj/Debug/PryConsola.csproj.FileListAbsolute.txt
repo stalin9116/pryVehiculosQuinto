@@ -1,0 +1,7 @@
+C:\Users\stali\source\repos\PryVehiculos_StalinMejia\PryConsola\bin\Debug\PryConsola.exe.config
+C:\Users\stali\source\repos\PryVehiculos_StalinMejia\PryConsola\bin\Debug\PryConsola.exe
+C:\Users\stali\source\repos\PryVehiculos_StalinMejia\PryConsola\bin\Debug\PryConsola.pdb
+C:\Users\stali\source\repos\PryVehiculos_StalinMejia\PryConsola\obj\Debug\PryConsola.csprojAssemblyReference.cache
+C:\Users\stali\source\repos\PryVehiculos_StalinMejia\PryConsola\obj\Debug\PryConsola.csproj.CoreCompileInputs.cache
+C:\Users\stali\source\repos\PryVehiculos_StalinMejia\PryConsola\obj\Debug\PryConsola.exe
+C:\Users\stali\source\repos\PryVehiculos_StalinMejia\PryConsola\obj\Debug\PryConsola.pdb
