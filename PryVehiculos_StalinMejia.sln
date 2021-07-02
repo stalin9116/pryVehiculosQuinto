@@ -7,6 +7,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PryVehiculos_StalinMejia", 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PryConsola", "PryConsola\PryConsola.csproj", "{124196AE-A2BD-432B-A8B6-90BEC64A3F11}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Logica", "Logica\Logica.csproj", "{1C75A7FC-D57E-40AE-AED9-C50A04FD6BFF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Data", "Data\Data.csproj", "{ABA12171-6B2F-477B-AA56-CC4897D6C274}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +25,14 @@ Global
 		{124196AE-A2BD-432B-A8B6-90BEC64A3F11}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{124196AE-A2BD-432B-A8B6-90BEC64A3F11}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{124196AE-A2BD-432B-A8B6-90BEC64A3F11}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1C75A7FC-D57E-40AE-AED9-C50A04FD6BFF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1C75A7FC-D57E-40AE-AED9-C50A04FD6BFF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1C75A7FC-D57E-40AE-AED9-C50A04FD6BFF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1C75A7FC-D57E-40AE-AED9-C50A04FD6BFF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ABA12171-6B2F-477B-AA56-CC4897D6C274}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ABA12171-6B2F-477B-AA56-CC4897D6C274}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ABA12171-6B2F-477B-AA56-CC4897D6C274}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ABA12171-6B2F-477B-AA56-CC4897D6C274}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

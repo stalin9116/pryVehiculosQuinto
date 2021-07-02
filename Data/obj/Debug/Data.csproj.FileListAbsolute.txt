@@ -1,0 +1,7 @@
+C:\Users\stali\source\repos\PryVehiculos_StalinMejia\Data\bin\Debug\Data.dll.config
+C:\Users\stali\source\repos\PryVehiculos_StalinMejia\Data\bin\Debug\Data.dll
+C:\Users\stali\source\repos\PryVehiculos_StalinMejia\Data\bin\Debug\Data.pdb
+C:\Users\stali\source\repos\PryVehiculos_StalinMejia\Data\obj\Debug\Data.csproj.CoreCompileInputs.cache
+C:\Users\stali\source\repos\PryVehiculos_StalinMejia\Data\obj\Debug\Data.dll
+C:\Users\stali\source\repos\PryVehiculos_StalinMejia\Data\obj\Debug\Data.pdb
+C:\Users\stali\source\repos\PryVehiculos_StalinMejia\Data\obj\Debug\Data.csprojAssemblyReference.cache

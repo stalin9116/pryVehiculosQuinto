@@ -14,45 +14,26 @@ namespace PryConsola
 
             try
             {
+                Persona persona = new Persona();
 
-                Vehiculo vehiculo = new Vehiculo();
-                vehiculo.codigo = 1;
-                vehiculo.placa = "PCW5065";
-                vehiculo.color = "Plomo";
-                vehiculo.modelo = "Toyota";
+                Console.WriteLine("Ingrese Identificacion: ");
+                persona.identificacion = Console.ReadLine();
+                Console.WriteLine("Ingrese Nombres: ");
+                persona.nombre = Console.ReadLine();
+                Console.WriteLine("Ingrese Sueldo: ");
+                persona.sueldo = Convert.ToDecimal(Console.ReadLine());
+                Console.WriteLine("Ingrese Dias Trabajados: ");
+                persona.dias = Convert.ToInt32(Console.ReadLine());
 
-                _listaVehiculos.Add(vehiculo);
+                decimal totalSueldo = calculos.calcularSueldo(persona.sueldo, persona.dias);
+                decimal iess = calculos.calcularIess(totalSueldo);
 
-                Vehiculo vehiculo2 = new Vehiculo();
-                vehiculo2.codigo = 2;
-                vehiculo2.placa = "PCW8090";
-                vehiculo2.color = "Negro";
-                vehiculo2.modelo = "VW";
-                _listaVehiculos.Add(vehiculo2);
 
-                //Vehiculo vehiculo = new Vehiculo();
+                decimal netoaRecibir = totalSueldo - iess;
 
-                //Console.WriteLine("Ingrese Codigo: ");
-                //vehiculo.codigo = Convert.ToInt32(Console.ReadLine());
-                //Console.WriteLine("Ingrese Placa: ");
-                //vehiculo.placa = Console.ReadLine();
-                //Console.WriteLine("Ingrese Color: ");
-                //vehiculo.color = Console.ReadLine();
-                //Console.WriteLine("Ingrese Chasis: ");
-                //vehiculo.chasis = Console.ReadLine();
-                //Console.WriteLine("Ingrese Modelo: ");
-                //vehiculo.modelo = Console.ReadLine();
 
-                //_listaVehiculos.Add(vehiculo);
-
-                foreach (var item in _listaVehiculos.Where(data => data.codigo == 1
-                                                           && data.modelo.Equals("VW")))
-                {
-                    Console.WriteLine("Codigo: " + item.codigo);
-                    Console.WriteLine("Placa: " + item.placa);
-                    Console.WriteLine("Color: " + item.color);
-                    Console.WriteLine("Modelo: " + item.modelo);
-                }
+                Console.WriteLine("Iess: " + iess.ToString("0.##"));
+                Console.WriteLine("Sueldo a recibir: " + netoaRecibir);
 
                 Console.ReadLine();
             }

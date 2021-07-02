@@ -1,0 +1,10 @@
+C:\Users\stali\source\repos\PryVehiculos_StalinMejia\Logica\bin\Debug\Logica.dll
+C:\Users\stali\source\repos\PryVehiculos_StalinMejia\Logica\bin\Debug\Logica.pdb
+C:\Users\stali\source\repos\PryVehiculos_StalinMejia\Logica\bin\Debug\Data.dll
+C:\Users\stali\source\repos\PryVehiculos_StalinMejia\Logica\bin\Debug\Data.pdb
+C:\Users\stali\source\repos\PryVehiculos_StalinMejia\Logica\bin\Debug\Data.dll.config
+C:\Users\stali\source\repos\PryVehiculos_StalinMejia\Logica\obj\Debug\Logica.csprojAssemblyReference.cache
+C:\Users\stali\source\repos\PryVehiculos_StalinMejia\Logica\obj\Debug\Logica.csproj.CoreCompileInputs.cache
+C:\Users\stali\source\repos\PryVehiculos_StalinMejia\Logica\obj\Debug\Logica.csproj.CopyComplete
+C:\Users\stali\source\repos\PryVehiculos_StalinMejia\Logica\obj\Debug\Logica.dll
+C:\Users\stali\source\repos\PryVehiculos_StalinMejia\Logica\obj\Debug\Logica.pdb
