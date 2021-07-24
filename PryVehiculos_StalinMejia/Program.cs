@@ -16,7 +16,7 @@ namespace PryVehiculos_StalinMejia
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Formularios.Clietnes.FrmClientes());
+            Application.Run(new Formularios.Reserva.FrmReserva());
         }
     }
 }

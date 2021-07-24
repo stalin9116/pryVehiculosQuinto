@@ -17,3 +17,5 @@ C:\Users\stali\source\repos\PryVehiculos_StalinMejia\PryVehiculos_StalinMejia\ob
 C:\Users\stali\source\repos\PryVehiculos_StalinMejia\PryVehiculos_StalinMejia\obj\Debug\PryVehiculos_StalinMejia.pdb
 C:\Users\stali\source\repos\PryVehiculos_StalinMejia\PryVehiculos_StalinMejia\obj\Debug\PryVehiculos_StalinMejia.Formularios.Usuarios.FrmUsuario.resources
 C:\Users\stali\source\repos\PryVehiculos_StalinMejia\PryVehiculos_StalinMejia\obj\Debug\PryVehiculos_StalinMejia.Formularios.Clietnes.FrmClientes.resources
+C:\Users\stali\source\repos\PryVehiculos_StalinMejia\PryVehiculos_StalinMejia\obj\Debug\PryVehiculos_StalinMejia.Formularios.Productos.FrmUploadCsv.resources
+C:\Users\stali\source\repos\PryVehiculos_StalinMejia\PryVehiculos_StalinMejia\obj\Debug\PryVehiculos_StalinMejia.Formularios.Reserva.FrmReserva.resources

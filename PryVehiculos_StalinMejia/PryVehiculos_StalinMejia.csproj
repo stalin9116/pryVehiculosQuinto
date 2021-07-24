@@ -70,6 +70,18 @@
     <Compile Include="Formularios\FrmPrincipal.Designer.cs">
       <DependentUpon>FrmPrincipal.cs</DependentUpon>
     </Compile>
+    <Compile Include="Formularios\Productos\FrmUploadCsv.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Productos\FrmUploadCsv.Designer.cs">
+      <DependentUpon>FrmUploadCsv.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Reserva\FrmReserva.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Reserva\FrmReserva.Designer.cs">
+      <DependentUpon>FrmReserva.cs</DependentUpon>
+    </Compile>
     <Compile Include="Formularios\Usuarios\FrmUsuario.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -86,6 +98,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\FrmPrincipal.resx">
       <DependentUpon>FrmPrincipal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Productos\FrmUploadCsv.resx">
+      <DependentUpon>FrmUploadCsv.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Reserva\FrmReserva.resx">
+      <DependentUpon>FrmReserva.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Usuarios\FrmUsuario.resx">
       <DependentUpon>FrmUsuario.cs</DependentUpon>
@@ -123,7 +141,6 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Formularios\Productos\" />
     <Folder Include="Formularios\Vehiculos\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

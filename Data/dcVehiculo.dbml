@@ -22,15 +22,6 @@
       <Association Name="ROL_USUARIO" Member="ROL" ThisKey="rol_id" OtherKey="rol_id" Type="ROL" IsForeignKey="true" />
     </Type>
   </Table>
-  <Table Name="dbo.CATEGORIA" Member="CATEGORIA">
-    <Type Name="CATEGORIA">
-      <Column Name="cat_id" Type="System.Byte" DbType="TinyInt NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
-      <Column Name="cat_descripcion" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
-      <Column Name="car_status" Type="System.Char" DbType="Char(1) NOT NULL" CanBeNull="false" />
-      <Column Name="car_add" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
-      <Association Name="CATEGORIA_PRODUCTO" Member="PRODUCTO" ThisKey="cat_id" OtherKey="cat_id" Type="PRODUCTO" />
-    </Type>
-  </Table>
   <Table Name="dbo.VEHICULO" Member="VEHICULO">
     <Type Name="VEHICULO">
       <Column Name="veh_id" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
@@ -101,35 +92,6 @@
       <Association Name="VEHICULO_ORDEN" Member="VEHICULO" ThisKey="veh_id" OtherKey="veh_id" Type="VEHICULO" IsForeignKey="true" />
     </Type>
   </Table>
-  <Table Name="dbo.PRODUCTO" Member="PRODUCTO">
-    <Type Name="PRODUCTO">
-      <Column Name="pro_id" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
-      <Column Name="pro_codigo" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
-      <Column Name="pro_nombre" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
-      <Column Name="pro_precio" Type="System.Decimal" DbType="Decimal(8,2) NOT NULL" CanBeNull="false" />
-      <Column Name="pro_stockminimo" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
-      <Column Name="pro_stokcmaximo" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
-      <Column Name="pro_original" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
-      <Column Name="pro_observacion" Type="System.String" DbType="NVarChar(200) NOT NULL" CanBeNull="false" />
-      <Column Name="pro_status" Type="System.Char" DbType="Char(1) NOT NULL" CanBeNull="false" />
-      <Column Name="pro_add" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
-      <Column Name="cat_id" Type="System.Byte" DbType="TinyInt" CanBeNull="true" />
-      <Association Name="PRODUCTO_DETALLE_ORDEN" Member="DETALLE_ORDEN" ThisKey="pro_id" OtherKey="pro_id" Type="DETALLE_ORDEN" />
-      <Association Name="CATEGORIA_PRODUCTO" Member="CATEGORIA" ThisKey="cat_id" OtherKey="cat_id" Type="CATEGORIA" IsForeignKey="true" />
-    </Type>
-  </Table>
-  <Table Name="dbo.RESERVA" Member="RESERVA">
-    <Type Name="RESERVA">
-      <Column Name="res_id" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
-      <Column Name="res_fecha" Type="System.DateTime" DbType="DateTime NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
-      <Column Name="res_numero" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
-      <Column Name="res_observacion" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
-      <Column Name="res_status" Type="System.Char" DbType="Char(1) NOT NULL" CanBeNull="false" />
-      <Column Name="res_add" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
-      <Column Name="cli_id" Type="System.Int32" DbType="Int" CanBeNull="true" />
-      <Association Name="CLIENTE_RESERVA" Member="CLIENTE" ThisKey="cli_id" OtherKey="cli_id" Type="CLIENTE" IsForeignKey="true" />
-    </Type>
-  </Table>
   <Table Name="dbo.SERVICIO" Member="SERVICIO">
     <Type Name="SERVICIO">
       <Column Name="ser_id" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
@@ -156,6 +118,56 @@
       <Column Name="cli_add" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
       <Association Name="CLIENTE_VEHICULO" Member="VEHICULO" ThisKey="cli_id" OtherKey="cli_id" Type="VEHICULO" />
       <Association Name="CLIENTE_RESERVA" Member="RESERVA" ThisKey="cli_id" OtherKey="cli_id" Type="RESERVA" />
+    </Type>
+  </Table>
+  <Table Name="dbo.CATEGORIA" Member="CATEGORIA">
+    <Type Name="CATEGORIA">
+      <Column Name="cat_id" Type="System.Byte" DbType="TinyInt NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="cat_descripcion" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="car_status" Type="System.Char" DbType="Char(1) NOT NULL" CanBeNull="false" />
+      <Column Name="car_add" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Association Name="CATEGORIA_PRODUCTO" Member="PRODUCTO" ThisKey="cat_id" OtherKey="cat_id" Type="PRODUCTO" />
+    </Type>
+  </Table>
+  <Table Name="dbo.PRODUCTO" Member="PRODUCTO">
+    <Type Name="PRODUCTO">
+      <Column Name="pro_id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="pro_codigo" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="pro_nombre" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="pro_precio" Type="System.Decimal" DbType="Decimal(8,2) NOT NULL" CanBeNull="false" />
+      <Column Name="pro_stockminimo" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="pro_stokcmaximo" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="pro_original" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="pro_observacion" Type="System.String" DbType="NVarChar(200) NOT NULL" CanBeNull="false" />
+      <Column Name="pro_status" Type="System.Char" DbType="Char(1) NOT NULL" CanBeNull="false" />
+      <Column Name="pro_add" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="cat_id" Type="System.Byte" DbType="TinyInt" CanBeNull="true" />
+      <Association Name="PRODUCTO_DETALLE_ORDEN" Member="DETALLE_ORDEN" ThisKey="pro_id" OtherKey="pro_id" Type="DETALLE_ORDEN" />
+      <Association Name="CATEGORIA_PRODUCTO" Member="CATEGORIA" ThisKey="cat_id" OtherKey="cat_id" Type="CATEGORIA" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.RESERVA" Member="RESERVA">
+    <Type Name="RESERVA">
+      <Column Name="res_id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="res_fecha" Type="System.DateTime" DbType="DateTime NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="res_numero" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="res_observacion" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="res_status" Type="System.Char" DbType="Char(1) NOT NULL" CanBeNull="false" />
+      <Column Name="res_add" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="cli_id" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="CLIENTE_RESERVA" Member="CLIENTE" ThisKey="cli_id" OtherKey="cli_id" Type="CLIENTE" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.MAILCONFIGURATION" Member="MAILCONFIGURATION">
+    <Type Name="MAILCONFIGURATION">
+      <Column Name="mco_id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="mco_server" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="mco_port" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="mco_ssl" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="mco_username" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="mco_password" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="mco_status" Type="System.Char" DbType="Char(1) NOT NULL" CanBeNull="false" />
+      <Column Name="mco_add" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
     </Type>
   </Table>
   <Function Name="dbo.Pcd_UpdateUser" Method="Pcd_UpdateUser">

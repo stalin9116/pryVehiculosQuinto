@@ -46,6 +46,22 @@ namespace Logica
             }
         }
 
+        public static CLIENTE getClientxIdentificacion(string identificacion)
+        {
+            try
+            {
+                var resultCLIENTE = dc.CLIENTE.Where(cliente => cliente.cli_status == 'A'
+                                                     && cliente.cli_identiticacion.Equals(identificacion)).FirstOrDefault();
+
+                return resultCLIENTE;
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+        }
+
         public static bool saveClient(CLIENTE dataCLIENTE)
         {
             try

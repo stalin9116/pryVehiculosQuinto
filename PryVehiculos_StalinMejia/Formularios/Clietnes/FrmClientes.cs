@@ -14,9 +14,10 @@ namespace PryVehiculos_StalinMejia.Formularios.Clietnes
 {
     public partial class FrmClientes : Form
     {
-        public FrmClientes()
+        public FrmClientes(string identificacion)
         {
             InitializeComponent();
+            txtIdentificacion.Text = identificacion;
         }
 
         private void FrmClientes_Load(object sender, EventArgs e)
@@ -52,6 +53,7 @@ namespace PryVehiculos_StalinMejia.Formularios.Clietnes
         private void btnGuardar_Click(object sender, EventArgs e)
         {
             saveCliente();
+           
         }
 
         private void validaciones()
@@ -86,7 +88,7 @@ namespace PryVehiculos_StalinMejia.Formularios.Clietnes
                 {
                     limpiar();
                     MessageBox.Show("Cliente Guardado correctamente", "Sistema Vehicular", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
+                    this.Close();
                 }
             }
             catch (Exception )
