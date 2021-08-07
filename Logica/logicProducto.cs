@@ -13,6 +13,41 @@ namespace Logica
 
         private static dcVehiculoDataContext dc = new dcVehiculoDataContext();
 
+
+        public static List<PRODUCTO> getAllProducts()
+        {
+            try
+            {
+                var resultPRODUCTO = dc.PRODUCTO.Where(products => products.pro_status == 'A')
+                                                     .OrderBy(data => data.pro_nombre);
+
+
+
+                return resultPRODUCTO.ToList();
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+        }
+
+        public static PRODUCTO getProdctxId(int idProducto)
+        {
+            try
+            {
+                var resultPRODUCTO = dc.PRODUCTO.Where(products => products.pro_status == 'A'
+                                                     && products.pro_id.Equals(idProducto)).FirstOrDefault();
+
+                return resultPRODUCTO;
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+        }
+
         public static PRODUCTO getProdctxCode(string codeProducto)
         {
             try
@@ -28,6 +63,7 @@ namespace Logica
                 throw;
             }
         }
+
 
         public static PRODUCTO getProdctxName(string nameProducto)
         {
@@ -107,6 +143,30 @@ namespace Logica
                     throw new ArgumentException("Eror al guardar el PRODUCTO");
                     //Guardar información en un archivo - base de datos - EventLog
                 } 
+            }
+        }
+
+
+        public static bool deleteProduct(PRODUCTO dataProducto)
+        {
+            try
+            {
+                bool resultado = false;
+
+                dataProducto.pro_status = 'I';
+                dataProducto.pro_add = DateTime.Now;
+
+                //commit
+                dc.SubmitChanges();
+
+                resultado = true;
+
+                return resultado;
+            }
+            catch (Exception)
+            {
+                throw new ArgumentException("Eror al eliminar el PRODUCTO");
+                //Guardar información en un archivo - base de datos - EventLog
             }
         }
 

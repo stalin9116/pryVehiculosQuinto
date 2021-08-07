@@ -106,6 +106,8 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="About.aspx" />
+    <Content Include="Administracion\Productos\wfmProductoNuevo.aspx" />
+    <Content Include="Administracion\Productos\wfmProdudctoLista.aspx" />
     <Content Include="Contact.aspx" />
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
@@ -239,6 +241,10 @@
     <Content Include="images\icons\icon-google.png" />
     <Content Include="images\icons\map-marker.png" />
     <Content Include="images\icons\symbol-01.png" />
+    <Content Include="images\icon_buscar.png" />
+    <Content Include="images\icon_delete.png" />
+    <Content Include="images\icon_nuevo.png" />
+    <Content Include="images\modificar.png" />
     <Content Include="js\main.js" />
     <Content Include="Public\wfmLogin.aspx" />
     <Content Include="Scripts\bootstrap.js" />
@@ -306,6 +312,20 @@
     <Content Include="Site.Mobile.Master" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Administracion\Productos\wfmProductoNuevo.aspx.cs">
+      <DependentUpon>wfmProductoNuevo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Administracion\Productos\wfmProductoNuevo.aspx.designer.cs">
+      <DependentUpon>wfmProductoNuevo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Administracion\Productos\wfmProdudctoLista.aspx.cs">
+      <DependentUpon>wfmProdudctoLista.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Administracion\Productos\wfmProdudctoLista.aspx.designer.cs">
+      <DependentUpon>wfmProdudctoLista.aspx</DependentUpon>
+    </Compile>
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="About.aspx.cs">
       <DependentUpon>About.aspx</DependentUpon>
@@ -363,7 +383,6 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Administracion\" />
     <Folder Include="App_Data\" />
   </ItemGroup>
   <ItemGroup>
